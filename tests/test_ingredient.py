@@ -1,28 +1,38 @@
+import allure
+import pytest
 from praktikum.ingredient import Ingredient
+from tests.data_test import IngredientConstants as IC
 
 
+@pytest.mark.parametrize('type_ingredient,name,price', [[IC.SAUCE_TYPE, IC.SAUCE_NAME, IC.SAUCE_PRICE],
+                                                        [IC.FILLING_TYPE, IC.FILLING_NAME, IC.FILLING_PRICE]])
 class TestBurger:
+    @allure.title('Проверка корректности типа ингредиента в созданном экземпляре класса')
+    def test_ingredient_type_true(self, type_ingredient, name, price):
+        ingredient = Ingredient(type_ingredient, name, price)
+        assert ingredient.type == type_ingredient
 
-    def test_ingredient_type_true(self):
-        ingredient = Ingredient('Соус', 'Космическое чили', 14)
-        assert ingredient.type == 'Соус'
+    @allure.title('Проверка корректности имени ингредиента в созданном экземпляре класса')
+    def test_name_og_ingredient_true(self, type_ingredient, name, price):
+        ingredient = Ingredient(type_ingredient, name, price)
+        assert ingredient.name == name
 
-    def test_name_og_ingredient_true(self):
-        ingredient = Ingredient('Соус', 'Космическое чили', 14)
-        assert ingredient.name == 'Космическое чили'
+    @allure.title('Проверка корректности цены ингредиента в созданном экземпляре класса')
+    def test_price_of_ingredient_true(self, type_ingredient, name, price):
+        ingredient = Ingredient(type_ingredient, name, price)
+        assert ingredient.price == price
 
-    def test_price_of_ingredient_true(self):
-        ingredient = Ingredient('Соус', 'Космическое чили', 14)
-        assert ingredient.price == 14
+    @allure.title('Успешное получение цены ингредиента')
+    def test_get_price_ingredient(self, type_ingredient, name, price):
+        ingredient = Ingredient(type_ingredient, name, price)
+        assert ingredient.get_price() == price
 
-    def test_get_price_ingredient(self):
-        ingredient = Ingredient('Соус', 'Космическое чили', 14)
-        assert ingredient.get_price() == 14
+    @allure.title('Успешное получение имени ингредиента')
+    def test_get_name_ingredient(self, type_ingredient, name, price):
+        ingredient = Ingredient(type_ingredient, name, price)
+        assert ingredient.get_name() == name
 
-    def test_get_name_ingredient(self):
-        ingredient = Ingredient('Соус', 'Космическое чили', 14)
-        assert ingredient.get_name() == 'Космическое чили'
-
-    def test_get_type(self):
-        ingredient = Ingredient('Соус', 'Космическое чили', 14)
-        assert ingredient.get_type() == 'Соус'
+    @allure.title('Успешное получение типа ингредиента')
+    def test_get_type(self, type_ingredient, name, price):
+        ingredient = Ingredient(type_ingredient, name, price)
+        assert ingredient.get_type() == type_ingredient
