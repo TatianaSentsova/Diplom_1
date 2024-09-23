@@ -4,15 +4,15 @@ from unittest.mock import Mock
 class Utils:
     @staticmethod
     def mock_bun(bun):
-        mock = Mock()
-        mock.get_name.return_value = bun[0]
-        mock.get_price.return_value = bun[1]
-        return mock
+        mock_bun = Mock()
+        mock_bun.get_name.return_value = bun[0]
+        mock_bun.get_price.return_value = bun[1]
+        return mock_bun
 
     @staticmethod
     def mock_ingredient(ingredient):
-        mock = Mock()
-        mock.get_type.return_value = ingredient[0]
-        mock.get_name.return_value = ingredient[1]
-        mock.get_price.return_value = ingredient[2]
-        return mock
+        mock_ingredient = Mock()
+        mock_ingredient.get_type.return_value = ingredient[0]
+        mock_ingredient.get_name.return_value = ingredient[1]
+        mock_ingredient.get_price.return_value = ingredient[2]
+        return mock_ingredient

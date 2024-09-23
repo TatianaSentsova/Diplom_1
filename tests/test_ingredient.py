@@ -13,7 +13,7 @@ class TestIngredient:
         assert ingredient.type == type_ingredient
 
     @allure.title('Проверка корректности имени ингредиента в созданном экземпляре класса')
-    def test_name_og_ingredient_true(self, type_ingredient, name, price):
+    def test_name_of_ingredient_true(self, type_ingredient, name, price):
         ingredient = Ingredient(type_ingredient, name, price)
         assert ingredient.name == name
 

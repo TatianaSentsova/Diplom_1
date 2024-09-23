@@ -12,7 +12,7 @@ class TestBurger:
         assert burger.bun is None
 
     @allure.title('Проверка начального состояния артибута ингрeдиенты в бургере')
-    def test_ingredient_in_burger_state(self):
+    def test_ingredients_in_burger_state(self):
         burger = Burger()
         assert burger.ingredients == []
 
