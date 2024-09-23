@@ -1,6 +1,6 @@
 import allure
 from praktikum.bun import Bun
-from tests.data_test import BunConstants as BC
+from data_test import BunConstants as BC
 
 
 class TestBun:

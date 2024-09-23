@@ -1,6 +1,6 @@
 import pytest
-from tests.data_test import BunConstants as BC, IngredientConstants as IC
-from tests.utils import Utils
+from data_test import BunConstants as BC, IngredientConstants as IC
+from utils import Utils
 
 
 @pytest.fixture

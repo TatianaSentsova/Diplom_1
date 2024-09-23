@@ -27,3 +27,15 @@ class Receipt:
                       "(==== black bun ====)\n"
                       "\n"
                       "Price: 500")
+
+
+class DatabaseList:
+    BUN_LIST = [['black bun', 100, 0],
+                ['white bun', 200, 1],
+                ['red bun', 300, 2]]
+    INGREDIENT_LIST = [[INGREDIENT_TYPE_SAUCE, 'hot sauce', 100, 0],
+                       [INGREDIENT_TYPE_SAUCE, 'sour cream', 200, 1],
+                       [INGREDIENT_TYPE_SAUCE, 'chili sauce', 300, 2],
+                       [INGREDIENT_TYPE_FILLING, 'cutlet', 100, 3],
+                       [INGREDIENT_TYPE_FILLING, 'dinosaur', 200, 4],
+                       [INGREDIENT_TYPE_FILLING, 'sausage', 300, 5]]

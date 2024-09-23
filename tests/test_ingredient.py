@@ -1,12 +1,12 @@
 import allure
 import pytest
 from praktikum.ingredient import Ingredient
-from tests.data_test import IngredientConstants as IC
+from data_test import IngredientConstants as IC
 
 
 @pytest.mark.parametrize('type_ingredient,name,price', [[IC.SAUCE_TYPE, IC.SAUCE_NAME, IC.SAUCE_PRICE],
                                                         [IC.FILLING_TYPE, IC.FILLING_NAME, IC.FILLING_PRICE]])
-class TestBurger:
+class TestIngredient:
     @allure.title('Проверка корректности типа ингредиента в созданном экземпляре класса')
     def test_ingredient_type_true(self, type_ingredient, name, price):
         ingredient = Ingredient(type_ingredient, name, price)

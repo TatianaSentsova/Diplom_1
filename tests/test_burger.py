@@ -1,8 +1,8 @@
 import pytest
 import allure
-from tests.data_test import IngredientConstants as IC, Receipt
+from data_test import IngredientConstants as IC, Receipt
 from praktikum.burger import Burger
-from tests.utils import Utils
+from utils import Utils
 
 
 class TestBurger:
