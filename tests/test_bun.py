@@ -9,7 +9,7 @@ class TestBun:
         bun = Bun(BC.BUN_NAME, BC.BUN_PRICE)
         assert bun.name == BC.BUN_NAME
 
-    @allure.title('Проверка корректности цены в созданной экземпляре класса булка')
+    @allure.title('Проверка корректности цены в созданном экземпляре класса булка')
     def test_price_of_bun_true(self):
         bun = Bun(BC.BUN_NAME, BC.BUN_PRICE)
         assert bun.price == BC.BUN_PRICE
